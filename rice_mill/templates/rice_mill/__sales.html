@@ -1,0 +1,57 @@
+<html>
+   <title>
+      Sales
+   </title>
+
+   <body>
+      <form action="">
+         <label for="pin"> <strong> Pin Number: </strong> </label> <input name="pin"/> <br>
+         <label for="name"> <strong> Name: </strong> </label> <input name="name"/> <br>
+         <label for="address"> <strong> Address: </strong> </label> <input name="address"/> <br>
+         <label for="broker"> <strong> Broker: </strong> </label> 
+
+         <select name="broker">
+            <option value="add"> Add </option>
+            <option value="A"> User A </option>
+            <option value="B"> User B </option>
+            <option value="C"> User C </option>
+         </select><br>
+
+         <label for="bill_no"> <strong> Bill Number: </strong> </label> <input name="bill_no"/> <br>
+         <label for="v_owner_name"> <strong> Vehicle Owner Name: </strong> </label> <input name="v_owner_name"/> <br>
+         <label for="v_number"> <strong> Vehicle Number: </strong> </label> <input name="v_number"/> <br>
+         <label for="qty"> <strong> Quantity: </strong> </label> <input name="qty"/> <br>
+         <label for="qty_type"> <strong> Quantity Type: </strong> </label>
+         <select name="qty_type">
+            <option value="1"> KG </option>
+            <option value="100"> Quintol </option>
+            <option value="1000"> Ton </option>
+         </select><br>
+
+         <label for="amount"> <strong> Amount/<!--p id="per_qty_type"> 
+               <script type="javascript"> document.getElementByName('qty_type').innerHTML </script></p-->: </strong> 
+         </label> <input name="amount"/> <br>
+         <label for="from"> <strong> From: </strong> </label> <input name="from"/> <br>
+         <label for="to"> <strong> To: </strong> </label> <input name="to"/> <br>
+         <label for="paddy_products"> <strong> Paddy Products: </strong> </label>
+         <select name="paddy_products">
+            <option value="paddy"> Paddy </option>
+            <option value="brokens"> Brokens </option>
+            <option value="nookalu"> Nookalu </option>
+            <option value="boiled rice"> Boiled Rice </option>
+            <option value="half boiled rice"> Half Boiled Rice </option>
+            <option value="steam rice"> Steam Rice </option>
+         </select><br>
+
+         <label for="sales_type"> <strong> Sales Type: </strong> </label>
+         <select name="sales_type">
+            <option value="5"> VAT </option>
+            <option value="2"> CSP </option>
+            <option value="0"> H-Form </option>
+            <option value="0"> CMR </option>
+         </select><br>
+         <label for="total"> <strong> Total Amount: </strong> </label> <b name="total">Auto Calculated</b>
+
+      </form>
+   </body>
+</html>

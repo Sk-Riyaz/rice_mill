@@ -1,0 +1,105 @@
+<html>
+	<title> Sales </title>
+   <head>
+      <link rel="stylesheet" href="style.css">
+   </head>
+
+   <body>
+      <div class="form-style-2">
+         <div class="form-style-2-heading">Provide your information</div>
+         <form action="" >
+            <label for="pin">
+               <span>Pin Number<span class="required">*</span>
+               </span>
+               <input type="text" class="input-field" name="pin" value="" required />
+            </label>
+            <label for="name">
+               <span>Name<span class="required">*</span>
+               </span>
+               <input type="text" class="input-field" name="name" value="" />
+            </label>
+            <label for="address">
+               <span>Address<span class="required">*</span>
+               </span>
+               <!--input type="text" class="input-field" name="address" value="" /-->
+               <textarea type="text" class="input-field" name="address" rows="4" cols="40"></textarea>
+               <!--textarea class="message input" name="message" rows="5" cols="40"></textarea-->
+            </label>
+            <label for="broker">
+               <span>Broker</span>
+               <select name="broker" class="select-field">
+                  <option value="Add">Add</option>
+                  <option value="A">User A</option>
+                  <option value="B">User B</option>
+                  <option value="C">User C</option>
+               </select>
+            </label>
+            <label for="bill_no">
+               <span>Bill Number</span>
+               <input type="text" class="input-field" name="bill_no" value="" />
+            </label>
+            <label for="v_owner_name">
+               <span>Vehicle Owner Name</span>
+               <input type="text" class="input-field" name="v_owner_name" value="" />
+            </label>
+            <label for="v_number">
+               <span>Vehicle Number</span>
+               <input type="text" class="input-field" name="v_number" value="" />
+            </label>
+            <label for="qty">
+               <span>Quantity</span>
+               <input type="text" class="input-field" name="qty" value="" />
+            </label>
+
+            <label for="qty_type">
+               <span>Quantity Type</span>
+               <select name="qty_type" class="select-field">
+                  <option value="1">KG</option>
+                  <option value="100">Quintol</option>
+                  <option value="1000">Ton</option>
+               </select>
+            </label>
+            <label for="amount">
+               <span>Amount</span>
+               <input type="text" class="input-field" name="amount" value="" />
+            </label>
+            <label for="from">
+               <span>From</span>
+               <input type="text" class="input-field" name="from" value="" />
+            </label>
+            <label for="to">
+               <span>To</span>
+               <input type="text" class="input-field" name="to"  />
+            </label>
+            <label for="paddy_products">
+               <span>Paddy Products</span>
+               <select name="paddy_products" class="select-field">
+                  <option value="paddy">Paddy</option>
+                  <option value="brokens">Brokens</option>
+                  <option value="nookalu">Nookalu</option>
+                  <option value="boiled rice">Boiled Rice</option>
+                  <option value="half boiled rice">Half Boiled Rice</option>
+                  <option value="steam rice">Steam Rice</option>
+               </select>
+            </label>
+            <label for="sales_type">
+               <span>Sales Type</span>
+               <select name="sales_type" class="select-field">
+                  <option value="5">VAT</option>
+                  <option value="2">CSP</option>
+                  <option value="0">H-Form</option>
+                  <option value="0 rice">CMR</option>
+               </select>
+            </label>
+            <label for="total">
+               <span>Total Amount</span>
+               <span name="total">Total Amount</span>
+            </label>
+            <label class="butnalign">
+               <span>&nbsp;</span>
+               <input type="submit" value="Submit" />
+            </label>
+         </form>
+      </div>
+   </body>
+</html>
