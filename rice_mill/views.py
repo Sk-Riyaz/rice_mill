@@ -2,6 +2,8 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
 
+from . import models
+
 # Create your views here.
 
 #@login_required
@@ -19,6 +21,7 @@ def landing(request):
 
 #@login_required
 def submit(request):
-   print ( request.POST.get('broker'), request.POST['rice_variety'] )
-   print ( request.POST )
-   return HttpResponse("<h1> Submitted SuccessFully</h1>")
+    #print ( request.POST.get('broker'), request.POST['rice_variety'] )
+    print ( request.POST )
+
+    return HttpResponse("<h1> Submitted SuccessFully</h1>")

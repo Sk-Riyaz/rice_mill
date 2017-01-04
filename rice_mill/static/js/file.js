@@ -4,17 +4,20 @@ function inputFieldChange( )
    if( b_val === "Add" )
    {
       document.getElementById("new_broker").style.display="inline";
+      document.getElementById("new_broker").required = true;
    }
    else
    {
       document.getElementById("new_broker").style.display="none";
+      document.getElementById("new_broker").required = false;
+      //alert(document.getElementById("new_broker").required+"HELLO");
    }
 }
 
 function calculateTotal()
 {
    var b_val = document.getElementById("qty").value;
-   alert(b_val);
+   //alert(b_val);
    /*
       if( b_val === "Add" )
       {
@@ -30,7 +33,7 @@ function calculateTotal()
 function displayForm() 
 {
    var x = document.getElementByName('form_type').submit();
-   alert( "myurl:"+x );
+   //alert( "myurl:"+x );
    
    /*
    var radios = document.getElementsByName('formselector');

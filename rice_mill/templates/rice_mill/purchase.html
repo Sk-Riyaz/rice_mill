@@ -3,20 +3,21 @@
       {% csrf_token %}
       <label for="broker">
          <span>Broker</span>
-         <select id="broker" name="broker" class="select-field" onChange="inputFieldChange();">
+         <select id="broker" name="broker" class="select-field" onchange="inputFieldChange()">
             <option value="Add">Add Broker</option>
             <option value="A">User A</option>
             <option value="B">User B</option>
             <option value="C">User C</option>
          </select>
          <span>&nbsp;</span>
-         <input type="text" class="input-field1" name="new_broker" id="new_broker"/>
+         <input type="text" class="input-field1" name="new_broker" id="new_broker" required>
          <script> inputFieldChange(); </script>
       </label>
 
       <label for="rice_variety">
          <span>Rice Variety</span>
-         <select name="rice_variety" class="select-field">
+         <select name="rice_variety" class="select-field" required>
+            <option value="">--select rice--</option>
             <option value="masoora">Masoora</option>
             <option value="bptl">BPTL</option>
          </select>
@@ -24,20 +25,20 @@
 
       <label for="vehicle_no">
          <span>Vehicle Number</span>
-         <input type="text" class="input-field" name="vehicle_no"  />
+         <input type="text" class="input-field" name="vehicle_no" required />
       </label>
 
       <label for="bag_type">
          <span>Bag Type</span>
          <select name="bag_type" class="select-field">
-            <option value="big">Big</option>
-            <option value="small">Small</option>
+            <option value="100">Big</option>
+            <option value="50">Small</option>
          </select>
       </label>
 
       <label for="no_of_bags">
          <span>Number of Bags</span>
-         <input type="text" class="input-field" name="no_of_bags"  />
+         <input type="text" class="input-field" name="no_of_bags" value="0"/>
       </label>
 
       <label for="weighment">
