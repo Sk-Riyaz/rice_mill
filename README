@@ -1,1 +1,29 @@
-Web application to support handling of Rice Mill industries.
+#Django based Web application to support functionalities of Rice Mill industries.
+
+Requirements:
+=============
+Open the command prompt in the current directory and execute the below commands:
+   1. python2.7
+   2. Django > 1.9
+
+Dependencies:
+=============
+
+Setup:
+======
+   1. Install python2.7
+   2. Open command prompt and navigate the python installed directory.
+   3. Run python Tools\Scripts\win_add2path
+   4. Run pip install --upgrade pip
+   5. Run pip install virtualenv
+   6. virtualenv <virtualenvname> #You virtual env name. Find more Info at: [https://virtualenv.pypa.io/en/stable/]
+   7. cd <virtualenvname>
+   8. Scripts\activate
+   9. Copy project directory to the <virtualenvname> directory.
+  10. Run pip install -U -r requirements.txt
+
+Run:
+====
+
+Open the command prompt in the current directory and execute the below command.
+   1. python manage.py runserver
