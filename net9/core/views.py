@@ -16,9 +16,9 @@ from PIL import Image
 
 def home(request):
     if request.user.is_authenticated():
-        print( "user is authenticated returning feeds" )
+        print( "user is authenticated returning home page" )
         #return feeds(request)
-        return render(request, 'core/cover.html')
+        return render(request, 'rice_mill/index.html')
     else:
         print( "user is not yet authenticated" )
         return render(request, 'core/cover.html')

@@ -3,9 +3,12 @@
 {% load i18n %}
 
 {% block head %}
+{% block title %} {{ title }} {% endblock %}
+
    <script type="text/javascript" src="{% static 'js/file.js' %}"> </script>
    <link rel="stylesheet" href="{% static 'css/style.css' %}?v=1">
 {% endblock head %}
+
 
 {% block main %}
    <div class="form-style-2">
@@ -14,17 +17,14 @@
             {% if form_type == 1 %}
                {% trans "checked" as purchase %}
                {% trans "" as sales %}
-               {% trans "Purchase" as title_name %}
                {% trans "purchase.html" as form_name %}
             {% elif form_type == 2 %}
                {% trans "" as purchase %}
                {% trans "checked" as sales %}
-               {% trans "Sales" as title_name %}
                {% trans "sales.html" as form_name %}
             {% else %}
                {% trans "checked" as purchase %}
                {% trans "" as sales %}
-               {% trans "Purchase" as title_name %}
                {% trans "purchase.html" as form_name %}
             {% endif %}
 
@@ -34,7 +34,6 @@
          </form>
       </div>
       <div class="main-form">
-         {% block title %} {{ title_name }} {% endblock %}
          {% include "rice_mill/"|add:form_name %}
       </div>
    </div>

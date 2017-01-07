@@ -119,9 +119,9 @@ USE_L10N = True
 USE_TZ = True
 
 #Cookie name. this can be whatever you want
-SESSION_COOKIE_NAME='sessionid'  # use the sessionid in your views code
+#SESSION_COOKIE_NAME='sessionid'  # use the sessionid in your views code
 #the module to store sessions data
-SESSION_ENGINE='django.contrib.sessions.backends.db'    
+SESSION_ENGINE='django.contrib.sessions.backends.db'
 #age of cookie in seconds (default: 2 weeks)
 SESSION_COOKIE_AGE= 24*60*60*7 # the number of seconds for only 7 for example
 #whether a user's session cookie expires when the web browser is closed
