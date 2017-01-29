@@ -2,7 +2,7 @@ from django import forms
 from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 
-from bootcamp.settings import ALLOWED_SIGNUP_DOMAINS
+from net9.settings import ALLOWED_SIGNUP_DOMAINS
 
 
 def SignupDomainValidator(value):
@@ -76,10 +76,12 @@ class SignUpForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super(SignUpForm, self).__init__(*args, **kwargs)
-        self.fields['username'].validators.append(ForbiddenUsernamesValidator)
-        self.fields['username'].validators.append(InvalidUsernameValidator)
         self.fields['username'].validators.append(
-            UniqueUsernameIgnoreCaseValidator)
+                ForbiddenUsernamesValidator)
+        self.fields['username'].validators.append(
+                InvalidUsernameValidator)
+        self.fields['username'].validators.append(
+                UniqueUsernameIgnoreCaseValidator)
         self.fields['email'].validators.append(UniqueEmailValidator)
         self.fields['email'].validators.append(SignupDomainValidator)
 

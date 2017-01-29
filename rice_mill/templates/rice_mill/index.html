@@ -2,17 +2,23 @@
 {% load staticfiles %}
 {% load i18n %}
 
-{% block head %}
 {% block title %} {{ title }} {% endblock %}
-
+{% block head %}
    <script type="text/javascript" src="{% static 'js/file.js' %}"> </script>
    <link rel="stylesheet" href="{% static 'css/style.css' %}?v=1">
 {% endblock head %}
 
-
 {% block main %}
    <div class="form-style-2">
       <div class="form-style-2-heading">
+         {% if messages %}
+            {% for message in messages %}
+               <div class="alert alert-success alert-dismissable">
+                  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                  {{ message }}
+               </div>
+            {% endfor %}
+         {% endif %}
          <form action="{% url 'rice_mill:index' %}" method="post" name="form_type">
             {% if form_type == 1 %}
                {% trans "checked" as purchase %}
@@ -34,6 +40,14 @@
          </form>
       </div>
       <div class="main-form">
+         {% if messages %}
+           {% for message in messages %}
+             <div class="alert alert-success alert-dismissable">
+               <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+               {{ message }}
+             </div>
+           {% endfor %}
+         {% endif %}
          {% include "rice_mill/"|add:form_name %}
       </div>
    </div>

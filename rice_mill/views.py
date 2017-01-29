@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 
 from datetime import datetime
 
@@ -10,19 +11,19 @@ from . import models
 
 @login_required
 def landing(request):
-   #return HttpResponse("Hello, world. You're at the polls index.")
-   print( "is authenticated:", request.user.is_authenticated(), request.user.username)
-   form_type = 1
-   if request.method == 'POST':
-       form_type = int(request.POST.get('formselector')[0].encode('utf-8'))
-   title = { 1 : 'Purchase'
-            ,2 : 'Sales' }.get(form_type)
-   return render( request, 
-           "rice_mill/index.html",
-           context = { 'user': request.user
-            ,'form_type': form_type
-            ,'title': title
-           } )
+    #return HttpResponse("Hello, world. You're at the polls index.")
+    print( "is authenticated:", request.user.is_authenticated(), request.user.username)
+    form_type = 1
+    if request.method == 'POST':
+        form_type = int(request.POST.get('formselector')[0].encode('utf-8'))
+    title = { 1 : 'Purchase'
+             ,2 : 'Sales' }.get(form_type)
+    return render( request, 
+            "rice_mill/index.html",
+            context = { 'user': request.user
+             ,'form_type': form_type
+             ,'title': title
+            } )
 
 @login_required
 def submit(request):
@@ -57,4 +58,17 @@ def submit(request):
     print ( purchases.__str__() )
     purchases.save()
 
-    return HttpResponse("<h1> Submitted SuccessFully</h1>")
+    messages.add_message(request, messages.SUCCESS,
+            'Your data has successfully submitted.')
+    #return HttpResponse("<h1> Submitted SuccessFully</h1>")
+    form_type = 1
+    #if request.method == 'POST':
+    #    form_type = int(request.POST.get('formselector')[0].encode('utf-8'))
+    title = { 1 : 'Purchase'
+            ,2 : 'Sales' }.get(form_type)
+    return render( request, 
+           "rice_mill/index.html",
+           context = { 'user': request.user
+            ,'form_type': form_type
+            ,'title': title
+           } )

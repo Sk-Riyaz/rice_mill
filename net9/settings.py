@@ -131,6 +131,7 @@ SESSION_COOKIE_SECURE=False
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
+ALLOWED_SIGNUP_DOMAINS = ['*']
 
 STATIC_ROOT = PROJECT_DIR.parent.child('staticfiles')
 STATIC_URL = '/static/'
